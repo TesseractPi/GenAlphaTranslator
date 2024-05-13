@@ -1,0 +1,44 @@
+body {
+    color: #ffffff;
+    background-color: #000000;
+    background-image: url(wallpapers/BG.jpg); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-position-y: top;
+    min-width: 640px;
+}
+
+::selection {
+    background: #c00;
+    color: #fff;
+}
+
+h1 {
+    font-size: 48px;
+    text-align: center;
+}
+
+.mainBox {
+    padding: 5px;
+}
+
+button {
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: inherit;
+    border: none;
+    background-color: #c0c0c0;
+}
+
+select, input {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    border: none;
+    background-color: #c0c0c0;
+}

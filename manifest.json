@@ -1,0 +1,10 @@
+{
+  "name": "Gen Alpha Translator",
+  "description": "So that you know what all the kids are saying these days",
+  "version": "0.1",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "translator.html",
+    "default_icon": "favicon.png"
+  }
+}
