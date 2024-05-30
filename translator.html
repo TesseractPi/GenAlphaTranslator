@@ -4,20 +4,98 @@
 		<!--Made by Sam Rohrbach-->
         <meta charset="utf-8">
 		<title>Sam Rohrbach's Projects</title>
-        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';">-->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';">
         <link rel="icon" href="icons/16.png">
         <link rel="stylesheet" href="MainThing.css">
-        <script src="SkibidiRizz.js" id="iPadKidScript"></script>
+        <script id="iPadKidScript">
+            // Code made by Sam Rohrbach, definitions by Google and my friends
+
+            function doRizzlerStuff() {
+                const response = document.getElementById('Skibidi').value
+                function Prompt() {
+                    if (response == '') {
+                        alert('Please actually type something.');
+                    }
+                }
+                
+                Prompt();
+                
+                function unrizz(word) { // Add words to translate right here
+                    // If a word is higher on the list, it gets translated first
+                    word = word.toLowerCase(); // just make everything lowercase
+                    word = word.replace(/rizzler/g, "charismatic person");
+                    word = word.replace(/rizz/g, "charisma");
+                    word = word.replace(/gyatt/g, "butt");
+                    word = word.replace(/gyat/g, "butt");
+                    word = word.replace(/skibidi/g, "evil");
+                    word = word.replace(/cap/g, "lie");
+                    word = word.replace(/drip/g, "style");
+                    word = word.replace(/fire/g, "cool");
+                    word = word.replace(/dogwater/g, "noob");
+                    word = word.replace(/litfam/g, "cool bro");
+                    word = word.replace(/fam/g, "family");
+                    word = word.replace(/bruh/g, "friend");
+                    word = word.replace(/bro/g, "friend");
+                    word = word.replace(/finsta/g, "fake Instagram");
+                    word = word.replace(/fire/g, "cool");
+                    word = word.replace(/bussin/g, "going really well");
+                    word = word.replace(/flexed/g, "showed off");
+                    word = word.replace(/flexing/g, "showing off");
+                    word = word.replace(/flex/g, "show off");
+                    word = word.replace(/goated/g, "considered the greatest of all time");
+                    word = word.replace(/lit/g, "cool");
+                    word = word.replace(/bet/g, "okay");
+                    word = word.replace(/lowkey/g, "discreet");
+                    word = word.replace(/goat/g, "greatest of all time");
+                    word = word.replace(/mewing/g, "jawline improving");
+                    word = word.replace(/ratio'd/g, "criticized");
+                    word = word.replace(/ratioed/g, "criticized");
+                    word = word.replace(/savage/g, "really cool");
+                    word = word.replace(/monkey/g, "mischievous child");
+                    word = word.replace(/squad/g, "friend group");
+                    word = word.replace(/ohio/g, "lawless");
+                    word = word.replace(/sus/g, "suspicious");
+                    word = word.replace(/zygote/g, "noob");
+                    word = word.replace(/sigma male/g, "leader");
+                    word = word.replace(/sigma/g, "leader");
+                    word = word.replace(/fanum tax/g, "food theft");
+                    word = word.replace(/phanum tax/g, "food theft");
+                    word = word.replace(/💀/g, "😂");
+                    word = word.replace(/😆/g, "😂");
+                    word = word.replace(/😭/g, "😂");
+                    word = word.replace(/delulu/g, "delusional");
+                    word = word.replace(/yass/g, "yes");
+                    word = word.replace(/griddy/g, "victory dance");
+                    word = word.replace(/finna/g, "going to");
+                    word = word.replace(/big yikes/g, "very embarrassing");
+                    word = word.replace(/cringe/g, "cringeworthy");
+                    word = word.replace(/boujee/g, "bourgeois");
+                    word = word.replace(/cheugy/g, "uncool");
+                    return word;
+                }
+                
+                function PutTextInDoc() {
+                    const PrefixDocuText = document.querySelector('span#iPadPrefix');
+                    PrefixDocuText.innerHTML = 'iPad Kid slang: '
+                    const RealDocuText = document.querySelector('span#SkibidiRizzlerText');
+                    RealDocuText.innerHTML = unrizz(response);
+                }
+                
+                PutTextInDoc();
+            }
+        </script>
 	</head>
 	<body>
+        <div class="navbar">
+            <a href="help.html">Help</a>
+        </div>
         <div class="mainBox">
             <!--Take a look at SkibidiRizz.js to see what words this translator translates. -->
             <h1>Gen Alpha Translator</h1>
-            <h3>Ever wondered what the iPad kids are trying to tell you? Wonder no more! Type words like "skibidi rizz gyatt" and know what it means (spoiler: word for word, something along the lines of "evil charisma butt"). If something doesn't translate or you're still confused, just google it. If I've made an error or forgot to include a word, email me at <a href="mailto:tesseractpi@samrohrbach.space">tesseractpi@samrohrbach.space</a> or submit a pull request on my <a href="https://github.com/TesseractPi/GenAlphaTranslator">GitHub</a>. </h3>
             <p>Enter text to de-slang here: <input id="Skibidi">
             <button onclick="doRizzlerStuff()">Translate</button>
             <br>
-            <p id="RizzlerTextbox"><span id="iPadPrefix">When you de-slang text, it will show up here.</span><br><span id="SkibidiRizzlerText"></span></p>
+            <p id="RizzlerTextbox"><span id="iPadPrefix">[translated text goes here]</span><br><span id="SkibidiRizzlerText"></span></p>
             <hr>
             <div id="copyright">
                 <p>Copyright 2024 Sam Rohrbach</p>
